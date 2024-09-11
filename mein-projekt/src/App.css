@@ -46,6 +46,11 @@ code {
 
 .css-w3t7ie .rw-today-date {
   color: rgb(181, 222, 244);
+
+  font-size: 1rem;
+  margin: 0 0 5px 2px;
+
+  font-weight: bold;
 }
 
 .css-w3t7ie .rw-today-current {

@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import ReactWeather from 'react-open-weather';
 import './App.css'; // Importiere die CSS-Datei für das Styling
 import IconTest from './components/IconTest';
 import Yoink from './components/yoink/Yoink';
-import WeatherComponent from './components/wettercomponents/WeatherComponent';
+import WeatherComponent from './components/WetterAuseinanderGefummelt/WeatherComponent2';
 
 const App = () => {
   const [weatherData, setWeatherData] = useState(null);
@@ -69,41 +68,9 @@ const App = () => {
         <div className="error">Error: {error}</div>
       ) : (
         <>
-          <h1>Hallo folgendes ist mein Dummy</h1>
-          <Yoink />
-          <IconTest />
-          {/* Wetterdaten für die ReactWeather-Komponente */}
-          {/* <ReactWeather
-            data={formattedData}
-            isLoading={isLoading}
-            errorMessage={error}
-            lang="en"
-            locationLabel="Munich"
-            unitsLabels={{ temperature: 'C', windSpeed: 'Km/h' }}
-            showForecast
-            theme={{
-              fontFamily: 'Helvetica, sans-serif',
-              gradientStart: '#0181C2',
-              gradientMid: '#04A7F9',
-              gradientEnd: '#4BC4F7',
-              locationFontColor: '#FFF',
-              todayTempFontColor: '#FFF',
-              todayDateFontColor: '#B5DEF4',
-              todayRangeFontColor: '#B5DEF4',
-              todayDescFontColor: '#B5DEF4',
-              todayInfoFontColor: '#B5DEF4',
-              todayIconColor: '#FFF',
-              forecastBackgroundColor: '#FFF',
-              forecastSeparatorColor: '#DDD',
-              forecastDateColor: '#777',
-              forecastDescColor: '#777',
-              forecastRangeColor: '#777',
-              forecastIconColor: '#4BC4F7',
-            }}
-          /> */}
-
-          {/* Füge hier die WetterComponent hinzu */}
-          {formattedData && (
+          
+          {/* WetterComponent einfügen */}
+          {weatherData && (
             <WeatherComponent data={weatherData} />
           )}
         </>
