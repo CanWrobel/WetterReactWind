@@ -77,7 +77,7 @@ const WeatherComponent = ({ data }) => {
                                     <div className="rw-today-hr"></div>
                                     <div className="rw-today-info">
                                         <div>
-                                            Wind: <b>{currentForecast.wind.speed.toFixed(1)}</b> Km/h
+                                            Wind: <b>{(currentForecast.wind.speed * 3.6).toFixed(1)}</b> Km/h
                                         </div>
                                         <div>
                                             Humidity: <b>{currentForecast.main.humidity}</b> %
