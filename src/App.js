@@ -16,7 +16,9 @@ const App = () => {
     axios
       .get(
   //Folgendes macht node-red     `https://api.openweathermap.org/data/2.5/forecast?lat=52.4991262&lon=13.3702779&appid=${apiKey}&units=metric`
-        "http://canwrobel.de:1880/weather"
+        //"http://canwrobel.de:1880/weather"
+
+        "https://canwrobel.de/1880/weather"
 )
       .then((response) => {
         setWeatherData(response.data);
