@@ -3,7 +3,7 @@ import axios from 'axios';
 import './App.css'; // Importiere die CSS-Datei für das Styling
 import IconTest from './components/IconTest';
 import Yoink from './components/yoink/Yoink';
-import WeatherComponent from './components/WetterAuseinanderGefummelt/WeatherComponent2';
+import WeatherComponent from './components/WetterAuseinanderGefummelt/WeatherComponent';
 
 const App = () => {
   const [weatherData, setWeatherData] = useState(null);
