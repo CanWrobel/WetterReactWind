@@ -10,13 +10,14 @@ const App = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const apiKey = '7856ee78fc1f5695adb17d5f75a9e338'; // Dein API-Schlüssel
+//  const apiKey = ''; // redacted und auf Node-Red ausgelagert
 
   useEffect(() => {
     axios
       .get(
-        `https://api.openweathermap.org/data/2.5/forecast?lat=52.4991262&lon=13.3702779&appid=${apiKey}&units=metric`
-      )
+  //Folgendes macht node-red     `https://api.openweathermap.org/data/2.5/forecast?lat=52.4991262&lon=13.3702779&appid=${apiKey}&units=metric`
+        "http://canwrobel.de:1880/weather"
+)
       .then((response) => {
         setWeatherData(response.data);
         setIsLoading(false);
@@ -25,7 +26,7 @@ const App = () => {
         setError(error.message);
         setIsLoading(false);
       });
-  }, [apiKey]);
+  }, []);
 
   // Formatierung der Wetterdaten für die ReactWeather-Komponente
   const formatWeatherData = (data) => {
