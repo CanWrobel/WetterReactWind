@@ -16,4 +16,8 @@ useEffect(() => {
   // Läuft bei jedem Rendern der Komponente
 });
 ```
-
+Um meinen API-Key zu verstecken:
+```
+git reset --hard HEAD~1
+git push --force
+```
